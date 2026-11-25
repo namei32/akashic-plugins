@@ -1,6 +1,10 @@
 # akashic-plugins
 
-Akashic 官方 extra 插件仓库。`main` 放插件源码，CI 把每个插件构建成完整的插件根，推到 `release/<插件名>` 分支；Core 的 `akashic pkg` 从这些分支安装和升级。目前 31 个插件都在这里。
+由 namei32 维护的 Akashic extra 插件仓库，保留 [原作者仓库](https://github.com/kachofugetsu09/akashic-plugins) 的历史。`main` 放插件源码，CI 把每个插件构建成完整的插件根，推到 `release/<插件名>` 分支；Core 的 `akashic pkg` 从这些分支安装和升级。Core 使用 [namei32/akashic](https://github.com/namei32/akashic)。
+
+上游只供人工比较和合入。`origin` 指向本仓库，`upstream` 指向原作者仓库；开发以 `main` 为基线，合并保留原始提交。`release/*` 与 `index` 的发布规则沿用下文，不能把源码分支直接当安装包。
+
+接管构建来源时保留原 `CORE_REF`，该提交已在个人 Core 仓库中保存。构建基线升级需要另行验证合成树中的合同与依赖兼容性；它不决定生产运行的 Core 版本。
 
 ## 分支约定
 
@@ -36,7 +40,7 @@ PR 与 main 都会：检出固定版本 Core，把本仓库的 `plugins/`、`fro
 ## 本地构建与验证
 
 ```bash
-git clone https://github.com/kachofugetsu09/akashic-agent core && git -C core checkout "$(cat CORE_REF)"
+git clone https://github.com/namei32/akashic.git core && git -C core checkout "$(cat CORE_REF)"
 python scripts/extra_ci.py compose --core core --synth /tmp/synth
 python scripts/extra_ci.py build --core core --synth /tmp/synth --bare /tmp/release.git --plan /tmp/plan.json
 git -C /tmp/release.git ls-tree -r release/<name>      # 看产物内容
