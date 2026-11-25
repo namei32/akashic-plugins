@@ -167,8 +167,8 @@ workspace_files = ()
 
 # 静态声明供安装侧不执行插件就能预拉镜像；运行时注册的镜像必须与它一致。
 images = (
-    "ghcr.io/kachofugetsu09/akashic-computer@"
-    "sha256:dd107c74c91d5778ebdc130f1c26828638f8c53e142c69771f4feb858b67f054",
+    "ghcr.io/namei32/akashic-computer@"
+    "sha256:2c10937c9ce8aadef8509aae84f2bbb4d34276b374f6ef589e02ac605d444073",
 )
 _IMAGE = images[0]
 
