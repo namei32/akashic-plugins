@@ -40,7 +40,7 @@ jobs:
       - name: Check out pinned Core
         uses: actions/checkout@v4
         with:
-          repository: kachofugetsu09/akashic-agent
+          repository: namei32/akashic
           ref: ${{ steps.pin.outputs.ref }}
           path: core
 
@@ -88,7 +88,7 @@ jobs:
       - name: Check out pinned Core
         uses: actions/checkout@v4
         with:
-          repository: kachofugetsu09/akashic-agent
+          repository: namei32/akashic
           ref: ${{ steps.pin.outputs.ref }}
           path: core
 
@@ -131,7 +131,7 @@ jobs:
       - name: Check out pinned Core
         uses: actions/checkout@v4
         with:
-          repository: kachofugetsu09/akashic-agent
+          repository: namei32/akashic
           ref: ${{ steps.pin.outputs.ref }}
           path: core
 
@@ -172,7 +172,7 @@ jobs:
       - name: Check out pinned Core
         uses: actions/checkout@v4
         with:
-          repository: kachofugetsu09/akashic-agent
+          repository: namei32/akashic
           ref: ${{ steps.pin.outputs.ref }}
           path: core
 
